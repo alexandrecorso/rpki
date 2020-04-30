@@ -12,7 +12,7 @@ docker run -d --name bird --network host -p 179 \
     -v /tmp/volume/bird/socket:/usr/local/var/run:rw \
     acorso/bird \
     -c /usr/local/etc/bird/bird.conf \
-    -s /usr/local/var/run/bird.ctl \
+    -s /usr/local/var/run/bird \
     -d 
 ```
 
