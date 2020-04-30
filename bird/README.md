@@ -10,10 +10,7 @@ docker build -f bird/Dockerfile -t acorso/bird .
 docker run -d --name bird --network host -p 179 \
     -v /tmp/bird/conf:/usr/local/etc/bird:rw \
     -v /tmp/volume/bird/socket:/usr/local/var/run:rw \
-    acorso/bird \
-    -c /usr/local/etc/bird/bird.conf \
-    -s /usr/local/var/run/bird \
-    -d 
+    acorso/bird
 ```
 
 Check if there is some issues:
