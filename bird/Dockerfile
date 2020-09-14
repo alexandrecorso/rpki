@@ -38,5 +38,5 @@ COPY --from=builder /bird-v2.0.7/birdc /usr/local/sbin/birdc
 COPY --from=builder /bird-v2.0.7/birdcl /usr/local/sbin/birdcl
 COPY --from=builder /bird-v2.0.7/doc/bird.conf.example /usr/local/etc/bird.conf
 
-ENTRYPOINT [ "bird", "-c", "/etc/bird/bird.conf", "-d", "-s", "/usr/local/var/run/bird.ctl" ]
+ENTRYPOINT [ "bird", "-c", "/etc/bird/bird.conf", "-d", "-s", "/var/run/bird.ctl" ]
 #CMD bird -c /etc/bird/bird.conf -d -s /var/run/bird.ctl
